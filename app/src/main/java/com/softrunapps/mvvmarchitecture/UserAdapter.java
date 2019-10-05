@@ -68,6 +68,10 @@ public class UserAdapter extends ListAdapter<User, UserAdapter.ViewHolder> {
         }
     }
 
+    public User getUser(int position) {
+        return getItem(position);
+    }
+
     public interface OnItemClickListener {
         void onItemClick(User user);
     }
