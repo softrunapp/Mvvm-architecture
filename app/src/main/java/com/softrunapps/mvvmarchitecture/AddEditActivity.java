@@ -58,6 +58,7 @@ public class AddEditActivity extends AppCompatActivity {
         String email = emailEditText.getText().toString();
         if (username.trim().isEmpty() || email.trim().isEmpty()) {
             Toast.makeText(this, "username or email is empty", Toast.LENGTH_SHORT).show();
+            return;
         }
 
         Intent data = new Intent();
@@ -71,13 +72,6 @@ public class AddEditActivity extends AppCompatActivity {
         finish();
     }
 
-    public static void open(Context context, User user) {
-        Intent intent = new Intent(context, AddEditActivity.class);
-        intent.putExtra(USER_ID, user.getId());
-        intent.putExtra(USERNAME, user.getUsernsme());
-        intent.putExtra(EMAIL, user.getEmail());
-        context.startActivity(intent);
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
