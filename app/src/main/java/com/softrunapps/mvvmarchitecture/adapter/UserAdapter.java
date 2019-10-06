@@ -16,7 +16,7 @@ import com.softrunapps.mvvmarchitecture.repository.room.User;
 public class UserAdapter extends ListAdapter<User, UserAdapter.ViewHolder> {
     private OnItemClickListener listener;
 
-    protected UserAdapter() {
+    public UserAdapter() {
         super(DIFF_CALLBACK);
     }
 
