@@ -2,6 +2,9 @@ package com.softrunapps.mvvmarchitecture.view;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -100,6 +103,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void deleteAllUsers() {
+        userViewModel.deleteAll();
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -120,10 +127,10 @@ public class MainActivity extends AppCompatActivity {
 
             String username = data.getStringExtra(AddEditActivity.USERNAME);
             String email = data.getStringExtra(AddEditActivity.EMAIL);
-            
+
             User user = new User(username, email);
             user.setId(id);
-            
+
             userViewModel.update(user);
 
             Toast.makeText(this, "User Updated", Toast.LENGTH_SHORT).show();
@@ -131,4 +138,23 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "User not saved", Toast.LENGTH_SHORT).show();
         }
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.delete_all:
+                deleteAllUsers();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 }
