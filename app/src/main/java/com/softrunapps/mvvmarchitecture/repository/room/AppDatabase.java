@@ -1,4 +1,4 @@
-package com.softrunapps.mvvmarchitecture;
+package com.softrunapps.mvvmarchitecture.repository.room;
 
 import android.content.Context;
 import android.os.AsyncTask;

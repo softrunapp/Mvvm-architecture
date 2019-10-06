@@ -1,4 +1,4 @@
-package com.softrunapps.mvvmarchitecture;
+package com.softrunapps.mvvmarchitecture.repository.room;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;

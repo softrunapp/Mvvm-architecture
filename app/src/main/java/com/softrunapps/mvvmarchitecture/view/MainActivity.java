@@ -1,4 +1,4 @@
-package com.softrunapps.mvvmarchitecture;
+package com.softrunapps.mvvmarchitecture.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +15,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.softrunapps.mvvmarchitecture.R;
+import com.softrunapps.mvvmarchitecture.adapter.UserAdapter;
+import com.softrunapps.mvvmarchitecture.UserViewModel;
+import com.softrunapps.mvvmarchitecture.repository.room.User;
 
 import java.util.List;
 

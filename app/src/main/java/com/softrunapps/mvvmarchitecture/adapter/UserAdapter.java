@@ -1,4 +1,4 @@
-package com.softrunapps.mvvmarchitecture;
+package com.softrunapps.mvvmarchitecture.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +9,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.softrunapps.mvvmarchitecture.R;
+import com.softrunapps.mvvmarchitecture.repository.room.User;
 
 public class UserAdapter extends ListAdapter<User, UserAdapter.ViewHolder> {
     private OnItemClickListener listener;

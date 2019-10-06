@@ -6,6 +6,10 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
+import com.softrunapps.mvvmarchitecture.repository.UserRepository;
+import com.softrunapps.mvvmarchitecture.repository.room.User;
+import com.softrunapps.mvvmarchitecture.repository.room.UserDao;
+
 import java.util.List;
 
 public class UserViewModel extends AndroidViewModel implements UserDao {

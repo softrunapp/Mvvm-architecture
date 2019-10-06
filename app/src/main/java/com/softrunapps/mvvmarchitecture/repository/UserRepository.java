@@ -1,9 +1,13 @@
-package com.softrunapps.mvvmarchitecture;
+package com.softrunapps.mvvmarchitecture.repository;
 
 import android.app.Application;
 import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
+
+import com.softrunapps.mvvmarchitecture.repository.room.AppDatabase;
+import com.softrunapps.mvvmarchitecture.repository.room.User;
+import com.softrunapps.mvvmarchitecture.repository.room.UserDao;
 
 import java.util.List;
 
